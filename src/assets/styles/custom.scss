@@ -1,0 +1,38 @@
+// -------------------- MAIN ------- >
+
+body {
+    margin: 0;
+}
+
+// -------------------- MAIN ------- >
+
+
+@mixin font( $size) {
+    font-size: $size;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+// -------------------- FLEX ------- >
+
+@mixin flexRow( $jc, $ai ) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin flexCol( $jc, $ai ) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// -------------------- FLEX ------- >
+
+// -------------------- VARS ------- >
+
+$main-color: rgb(7, 11, 24);
+$main-white: rgb(235, 235, 235);
+
+// -------------------- VARS ------- >
