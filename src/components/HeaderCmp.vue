@@ -19,7 +19,8 @@
             </div>
 
             <div class="header-cmp-control-section-logout">
-                <tab-ui-cmp btnName="Выйти" />
+                <tab-ui-cmp btnName="Выйти"
+                    @click-handler="clickHandler" />
             </div>
         </div>
 
@@ -38,6 +39,12 @@ import TabUiCmp from './ui/btn/TabUiCmp.vue'
             NavUiCmp,
             SearchUiCmp,
             TabUiCmp
+        },
+
+        methods: {
+            clickHandler() {
+                console.log( 'Logout' );
+            }
         }
     }
 </script>

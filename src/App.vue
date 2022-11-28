@@ -1,14 +1,17 @@
 <template>
   <header-cmp />
+  <main-cmp />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import HeaderCmp from './components/HeaderCmp.vue';
+import MainCmp from './components/MainCmp.vue'
 
 @Options({
   components: {
-    HeaderCmp
+    HeaderCmp,
+    MainCmp
   },
 })
 
