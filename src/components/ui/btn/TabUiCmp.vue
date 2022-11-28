@@ -11,12 +11,7 @@
         props: {
             btnName: { type: String, default: 'btn' },
             amount: { type: Number, default: 0 }
-        },
-
-        mounted() {
-            this.$el.style.width = 'calc( 100% / amount )'
-        },
-        
+        }
     }
 </script>
 
