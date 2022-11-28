@@ -6,12 +6,12 @@
 import { Options, Vue } from 'vue-class-component';
 import HeaderCmp from './components/HeaderCmp.vue';
 
-
 @Options({
   components: {
     HeaderCmp
   },
 })
+
 export default class App extends Vue {}
 </script>
 
@@ -22,4 +22,5 @@ export default class App extends Vue {}
   @include flexCol( flex-start, center );
   height: 100vh;
 }
+
 </style>

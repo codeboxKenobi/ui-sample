@@ -36,3 +36,16 @@ $main-color: rgb(7, 11, 24);
 $main-white: rgb(235, 235, 235);
 
 // -------------------- VARS ------- >
+
+// -------------------- CLASS ------- >
+.active-tab {
+    // border: 1px solid red;
+
+    @include font( 14px );
+    outline: none;
+
+    background-color: $main-color;
+    color: $main-white;
+
+}
+// -------------------- CLASS ------- >

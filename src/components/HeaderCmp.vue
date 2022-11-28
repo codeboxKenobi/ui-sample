@@ -57,16 +57,16 @@ import NavUiCmp from './ui/NavUiCmp.vue'
 
     &-search-section {
         height: 80%;
-        width: 30%;
+        width: 26%;
         margin: 5px;
-        // background-color: #fff;
+        background-color: rgb(233, 193, 193);
     }
 
     &-control-section {
         height: 80%;
-        width: 22%;
+        width: 20%;
         margin: 5px;
-        // background-color: #fff;
+        background-color: rgb(158, 209, 162);
     }
 }
 </style>

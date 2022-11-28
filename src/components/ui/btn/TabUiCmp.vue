@@ -12,6 +12,11 @@
             btnName: { type: String, default: 'btn' },
             amount: { type: Number, default: 0 }
         },
+
+        mounted() {
+            this.$el.style.width = 'calc( 100% / amount )'
+        },
+        
     }
 </script>
 
@@ -21,13 +26,8 @@
 .tab-ui-cmp {
     @include font( 14px );
     height: 90%;
-    width: 24%;
+    width: calc( 100% / v-bind( amount ) - 5px );
     border: none;
     outline: none;
-
-    &:hover {
-        background-color: $main-color;
-        color: $main-white;
-    }
 }
 </style>

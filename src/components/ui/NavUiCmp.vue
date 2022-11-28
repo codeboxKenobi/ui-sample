@@ -1,20 +1,28 @@
 <template>
     <div class="nav-ui-cmp">
-        <tab-ui-cmp :amount="navTabs.length" :btnName="Object.values( navTab )[ 0 ]" 
+        <tab-ui-cmp :amount="navTabs.length"  
             v-for="( navTab, navTabIndex ) in navTabs" 
+                :class="active === navTabIndex 
+                    ? 'active-tab' 
+                    : '' "
                 :key="navTabIndex"
-                @click-handler="clickHandler( navTab )" />
+                :btnName="Object.values( navTab )[ 0 ]"
+                :id="Object.keys( navTab )"
+                    @click="active = navTabIndex"
+                    @click-handler="clickHandler( navTab )" />
     </div>
 </template>
 
 <script>
+
 import TabUiCmp from './btn/TabUiCmp.vue'
-import { navTabs } from '/src/assets/data/ui-data.js'
+import { navTabs } from '/src/assets/data/ui-nav-data.js'
 
     export default {
         data() {
             return {
-                navTabs
+                navTabs,
+                active: false
             }
         },
 
@@ -28,6 +36,7 @@ import { navTabs } from '/src/assets/data/ui-data.js'
             }
         }
     }
+    
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +46,5 @@ import { navTabs } from '/src/assets/data/ui-data.js'
     @include flexRow( space-between, center );
     height: 90%;
     width: 98%;
-    // background-color: rgb(150, 94, 94);
 }
 </style>
