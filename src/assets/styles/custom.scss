@@ -34,18 +34,22 @@ body {
 
 $main-color: rgb(7, 11, 24);
 $main-white: rgb(235, 235, 235);
+$main-color-hover: rgba(7, 11, 24, 0.6);
+
+$main-border1: 1px solid $main-color;
 
 // -------------------- VARS ------- >
 
 // -------------------- CLASS ------- >
 .active-tab {
-    // border: 1px solid red;
-
     @include font( 14px );
     outline: none;
-
     background-color: $main-color;
     color: $main-white;
+
+    &:hover {
+        color: $main-white;
+    }
 
 }
 // -------------------- CLASS ------- >

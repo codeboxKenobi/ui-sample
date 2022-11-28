@@ -10,11 +10,17 @@
         </div>
 
         <div class="header-cmp-search-section">
-
+            <search-ui-cmp />
         </div>
 
         <div class="header-cmp-control-section">
+            <div class="header-cmp-control-section-account">
+                Пользователь: kenobi@gmail.com
+            </div>
 
+            <div class="header-cmp-control-section-logout">
+                <tab-ui-cmp btnName="Выйти" />
+            </div>
         </div>
 
     </div>
@@ -23,10 +29,15 @@
 <script>
 import LogoUiCmp from './ui/LogoUiCmp.vue'
 import NavUiCmp from './ui/NavUiCmp.vue'
+import SearchUiCmp from './ui/SearchUiCmp.vue'
+import TabUiCmp from './ui/btn/TabUiCmp.vue'
+
     export default {
         components: {
             LogoUiCmp,
-            NavUiCmp
+            NavUiCmp,
+            SearchUiCmp,
+            TabUiCmp
         }
     }
 </script>
@@ -56,17 +67,36 @@ import NavUiCmp from './ui/NavUiCmp.vue'
     }
 
     &-search-section {
+        @include flexRow( center, center );
         height: 80%;
         width: 26%;
         margin: 5px;
-        background-color: rgb(233, 193, 193);
+        // background-color: rgb(214, 123, 123);
     }
 
     &-control-section {
+        @include flexRow( space-between, center );
         height: 80%;
-        width: 20%;
+        width: 25%;
         margin: 5px;
-        background-color: rgb(158, 209, 162);
+        // background-color: rgb(158, 209, 162);
+
+        &-account {
+            @include flexRow( flex-start, center );
+            @include font( 10px );
+            height: 30px;
+            width: 60%;
+            padding: 0px 10px;
+            border: $main-border1;
+            // background-color: rgb(207, 110, 110);
+        }
+
+        &-logout {
+            @include flexRow( center, center );
+            height: 80%;
+            width: 30%;
+            // background-color: rgb(181, 189, 70);
+        }
     }
 }
 </style>

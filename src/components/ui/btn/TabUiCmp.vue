@@ -19,10 +19,16 @@
 @import '~/src/assets/styles/custom.scss';
 
 .tab-ui-cmp {
+    @include flexRow( center, center );
     @include font( 14px );
-    height: 90%;
+    height: 32px;
     width: calc( 100% / v-bind( amount ) - 5px );
     border: none;
     outline: none;
+
+    &:hover {
+        color: $main-color;
+        border: $main-border1;
+    }
 }
 </style>
